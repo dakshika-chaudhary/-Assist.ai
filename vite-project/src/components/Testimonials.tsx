@@ -37,8 +37,15 @@ const Testimonials: React.FC = () => {
     <path d="M10.525.464a.5.5 0 0 1 .95 0l2.107 6.482a.5.5 0 0 0 .475.346h6.817a.5.5 0 0 1 .294.904l-5.515 4.007a.5.5 0 0 0-.181.559l2.106 6.483a.5.5 0 0 1-.77.559l-5.514-4.007a.5.5 0 0 0-.588 0l-5.514 4.007a.5.5 0 0 1-.77-.56l2.106-6.482a.5.5 0 0 0-.181-.56L.832 8.197a.5.5 0 0 1 .294-.904h6.817a.5.5 0 0 0 .475-.346z" />
   </svg>
 );
+    interface CardType {
+  image: string;
+  name: string;
+  title: string;
+  content: string;
+  rating: number;
+}
 
-    const CreateCard = ({ card }) => (<>
+    const CreateCard: React.FC<{ card: CardType }> = ({ card }) => (<>
        
         <div className="p-4 rounded-lg mx-4 shadow hover:shadow-lg transition-all duration-200 w-72 shrink-0">
             
